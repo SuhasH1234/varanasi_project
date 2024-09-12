@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <h1 align="center">Varanasi</h1>
-      <h2 align="center">Welcome to the store</h2>
+      <h2 align="center">Welcome to the Varanasi Store</h2>
       <div className="image-container">
         <img src={imagesVaranasi} alt="Store" className="responsive-image" />
         <img src={imagesVaranasi1} alt="Store" className="responsive-image" />
