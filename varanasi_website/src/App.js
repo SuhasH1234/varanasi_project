@@ -7,12 +7,11 @@ function App() {
     <>
       <h1 align="center">Varanasi</h1>
       <h2 align="center">Welcome to the store</h2>
-      <div align="center">
-        <img src={imagesVaranasi} alt="Store" width="300px" height="300px" />
-        <img src={imagesVaranasi1} alt="Store" width="300px" height="300px" />
+      <div className="image-container">
+        <img src={imagesVaranasi} alt="Store" className="responsive-image" />
+        <img src={imagesVaranasi1} alt="Store" className="responsive-image" />
       </div>
     </>
   );
 }
-
 export default App;
