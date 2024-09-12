@@ -1,5 +1,6 @@
 import './App.css';
 import imagesVaranasi from '../src/varanasi_image.jpg';
+import imagesVaranasi1 from '../src/varanasi_image1.jpg';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <div align="center">
         {/* Add the image here */}
         <img src={imagesVaranasi} alt="Store" width="300px" height="300px" />
+        <img src={imagesVaranasi1} alt="Store" width="300px" height="300px" />
       </div>
     </>
   );
