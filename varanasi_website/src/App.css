@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.js */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between the images */
+  flex-wrap: wrap; /* Ensures that on smaller screens, images can wrap */
+  padding: 20px;
+}
+
+.responsive-image {
+  max-width: 45%; /* Adjust the width to ensure images don't take more than 45% of container */
+  height: auto; /* Maintain aspect ratio */
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .responsive-image {
+    max-width: 90%; /* On smaller screens, allow the images to be larger */
+  }
+}
+
