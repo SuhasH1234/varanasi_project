@@ -11,3 +11,115 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.grid > div {
+  height: 78px;
+}
+
+.frame {
+  translate: 0 10px;
+}
+
+.frame header {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.frame h1 {
+  font-size: 24px;
+  color: #fff;
+}
+
+.frame h2 {
+  font-size: 19px;
+  color: #ccc;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button Styles */
+.btn-1,
+.btn-1 * {
+  border: 0;
+  box-sizing: border-box;
+}
+
+.btn-1 {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 0.1;
+  margin: 0;
+  padding: 1.2rem 2.5rem;
+  border-radius: 80px;
+  border: 0.1px solid black;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.btn-1 .original {
+  background: #fff;
+  color: #000;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  transition: transform 0.3s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.btn-1:hover .original {
+  transform: translateY(100%);
+}
+
+.btn-1 .letters {
+  display: inline-flex;
+}
+
+.btn-1 span {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: transform 0.3s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.3s;
+}
+
+.btn-1 span:nth-child(2n) {
+  transform: translateY(15px);
+}
+
+.btn-1:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-1:hover span:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.btn-1:hover span:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.btn-1:hover span:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.btn-1:hover span:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.btn-1:hover span:nth-child(6) {
+  transition-delay: 0.5s;
+}
