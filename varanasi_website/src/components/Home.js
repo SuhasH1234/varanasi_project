@@ -1,16 +1,14 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import i1 from '../assessts/download (1).jpg';
-import i2 from '../assessts/download.jpg';
-import i3 from '../assessts/OIP (1).jpg';
-import i4 from '../assessts/OIP.jpg';
+import im1 from '../assessts/banaras.jpg';
+import im5 from '../assessts/Glass Beads.jpg';
+import im7 from '../assessts/Hand-Knotted Carpets.jpg';
+import im9 from '../assessts/Stone-Carved Curios.jpg';
+import im10 from '../assessts/Wooden Toys.jpg';
+import im11 from '../assessts/rm.jpg';
 import '../App.css';
 import { useAuth0 } from "@auth0/auth0-react"; // Import Auth0 hook
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
-
-const images = [
-  i1, i2, i3, i4
-];
 
 function Home() {
   const { isAuthenticated } = useAuth0(); // Get authentication status
@@ -19,7 +17,7 @@ function Home() {
   // Navigate to Artisan.js if authenticated
   React.useEffect(() => {
     if (isAuthenticated) {
-      navigate('/artisan'); // Change '/artisan' to the correct route for Artisan.js
+      navigate('/customer'); // Change '/artisan' to the correct route for Artisan.js
     }
   }, [isAuthenticated, navigate]);
 
@@ -28,83 +26,135 @@ function Home() {
     return null;
   }
 
-  const imageArray = [...images, ...images];
-
   return (
     <>
       <Box sx={{ textAlign: 'center' }}>
-        <Typography variant="h4" gutterBottom>
-          Welcome to the Varanasi Store
-        </Typography>
-
-        {/* Image Carousel */}
         <Box
           sx={{
-            position: 'relative',
-            width: '100%',
-            height: 'auto',
-            overflow: 'hidden',
-            borderRadius: 2,
-            boxShadow: 3,
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            marginBottom: '20px',
+            marginLeft: '35%'
           }}
         >
-          <Box
+          <Typography variant="h4" 
             sx={{
-              display: 'flex',
-              flexDirection: 'row',
-              width: '35%',
-              height: '400px',
-              animation: 'slide 15s linear infinite',
+              fontFamily: 'Roboto, sans-serif',
+              fontWeight: 'bold',
+              color: 'black',
             }}
           >
-            {imageArray.map((src, index) => (
-              <Box
-                key={index}
-                sx={{
-                  flex: '0 0 100%',
-                  height: '100%',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                <img
-                  src={src}
-                  alt={`Slide ${index + 1}`}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                  }}
-                />
-              </Box>
-            ))}
-          </Box>
+            Welcome to the Varanasi Store
+          </Typography>
         </Box>
-
-        {/* Carousel Animation */}
-        <style>
-          {`
-            @keyframes slide {
-              0% {
-                transform: translateX(0);
-              }
-              100% {
-                transform: translateX(-100%);
-              }
-            }
-          `}
-        </style>
-      </Box>
-
-      {/* Copyright Section  */}
-      <Box sx={{ textAlign: 'center', padding: 2, backgroundColor: '#f5f5f5', marginTop: 'auto' }}>
-        <Typography variant="body2" color="textSecondary">
-          &copy; {new Date().getFullYear()} Varanasi. All rights reserved.
-        </Typography>
-        <Typography variant="body2" color="textSecondary">
-          Privacy Policy | Terms of Service
-        </Typography>
+        <Box
+        sx={{
+          width: '70%',
+          height: '450px',
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '10px',
+          margin: 'auto',
+        }}
+      >
+        <Box
+          component="img"
+          src={im1}
+          alt="img1"
+          sx={{
+            width: '15%',
+            height: '100%',
+            objectFit: 'cover',
+            borderRadius: '10px',
+            border: '0.5px solid black',
+            transition: 'all ease-in-out 0.5s',
+            '&:hover': {
+              width: '25%',
+            },
+          }}
+        />
+        <Box
+          component="img"
+          src={im5}
+          alt="img5"
+          sx={{
+            width: '15%',
+            height: '100%',
+            objectFit: 'cover',
+            borderRadius: '10px',
+            border: '1px solid black',
+            transition: 'all ease-in-out 0.5s',
+            '&:hover': {
+              width: '25%',
+            },
+          }}
+        />
+        <Box
+          component="img"
+          src={im9}
+          alt="img9"
+          sx={{
+            width: '15%',
+            height: '100%',
+            objectFit: 'cover',
+            borderRadius: '10px',
+            border: '1px solid black',
+            transition: 'all ease-in-out 0.5s',
+            '&:hover': {
+              width: '25%',
+            },
+          }}
+        />
+        <Box
+          component="img"
+          src={im7}
+          alt="img7"
+          sx={{
+            width: '15%',
+            height: '100%',
+            objectFit: 'cover',
+            borderRadius: '10px',
+            border: '1px solid black',
+            transition: 'all ease-in-out 0.5s',
+            '&:hover': {
+              width: '25%',
+            },
+          }}
+        />
+        <Box
+          component="img"
+          src={im11}
+          alt="img11"
+          sx={{
+            width: '15%',
+            height: '100%',
+            objectFit: 'cover',
+            borderRadius: '10px',
+            border: '1px solid black',
+            transition: 'all ease-in-out 0.5s',
+            '&:hover': {
+              width: '25%',
+            },
+          }}
+        />
+        <Box
+          component="img"
+          src={im10}
+          alt="im10"
+          sx={{
+            width: '15%',
+            height: '100%',
+            objectFit: 'cover',
+            borderRadius: '10px',
+            border: '1px solid black',
+            transition: 'all ease-in-out 0.5s',
+            '&:hover': {
+              width: '25%',
+            },
+          }}
+        />
+        </Box>
       </Box>
     </>
   );
