@@ -272,7 +272,7 @@ function ContactUs() {
                     Still Not Solved? Feel Free to Contact Us
                 </Typography>
                 <Typography variant="body1" sx={{ marginBottom: 1, mt: 1 }}>
-                    <strong>Email:</strong> varanasihelp@gmail.com
+                    <strong>Email:</strong> suhasharish9090@gmail.com
                 </Typography>
                 <Typography variant="body1">
                     <strong>Phone Number:</strong> +9480506235
